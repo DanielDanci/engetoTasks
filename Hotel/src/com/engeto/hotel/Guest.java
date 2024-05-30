@@ -1,4 +1,4 @@
-package Classes;
+package com.engeto.hotel;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -16,14 +16,30 @@ public class Guest {
         this.birthDate = parseDate(birthDate);
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
     }
 
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     public String getSurname() {
         return surname;
     }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = parseDate(birthDate);
+    }
+
+    public String getBirthDate() {
+        return birthDate.format(FORMATTER);
+    }
+
 
     private LocalDate parseDate(String date) {
         return LocalDate.parse(date, FORMATTER);
